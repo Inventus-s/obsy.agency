@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100%;
+  /* overflow-y: hidden; */
+  cursor: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.crsr {
+  height: 3vw;
+  width: 3vw;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: fixed;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+.loader {
+  /* position: absolute; */
+  height: 100vh;
+  width: 100%;
+  background-color: #0b0b0b;
+  padding: 5vw;
+  padding-top: 6vw;
+}
+
+.line {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.line1-count {
+  margin-left: 7vw;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 1vw;
+  margin-right: 4vw;
+}
+
+.line1-count h5 {
+  font-size: 3.5vw;
+  font-family: "silk serif";
+  font-weight: 100;
+  /* background-color: red; */
+  height: fit-content;
+  width: 6vw;
+  text-align: end;
+}
+
+.line1-count h5:nth-child(2) {
+  width: fit-content;
+}
+
+.loader h1 {
+  text-transform: uppercase;
+  font-size: 7.3vw;
+  font-family: "plain";
+  font-weight: 500;
+  line-height: 1;
+}
+
+.line h4 {
+  text-transform: uppercase;
+  font-size: 7.3vw;
+  font-family: "plain";
+  line-height: 1;
+  font-weight: 500;
+  margin-left: 13px;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes anime {
+  0% {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    opacity: 1;
+  }
+  48% {
+    font-family: "silk serif";
+    -webkit-text-stroke: 1px white;
+    opacity: 1;
+    color: transparent;
+  }
+  50% {
+    opacity: 0;
+  }
+  62% {
+    font-family: "plain";
+    -webkit-text-stroke: 1px white;
+    opacity: 1;
+  }
+  100% {
+    font-family: "plain";
+    -webkit-text-stroke: 1px white;
+    opacity: 0;
+  }
+}
+
+.loader .bottom {
+  margin-top: 5vw;
+  margin-left: 23vw;
+  height: fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.loader .bottom h3 {
+  font-family: "plain light";
+  font-weight: 100;
+  font-size: 1.1vw;
+  /* line-height: 1; */
+}
+
+/* main */
+main {
+  position: relative;
+  background-color: black;
+}
+/* page 1 */
+.page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
+nav {
+  width: 100%;
+  height: 10vw;
+  padding: 4vw 5vw;
+  display: flex;
+}
+
+.nav-left {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.nav-right {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-right p {
+  font-family: "plain";
+  line-height: 1;
+  font-weight: 100;
+}
+
+.nav-right-right {
+  display: flex;
+  gap: 3vw;
+}
+
+.nav-right-right h4 {
+  font-family: "plain light";
+  font-weight: 500;
+  font-size: 1.1vw;
+}
+
+/* hero-section */
+section {
+  width: 100%;
+  height: calc(100% - 10vw);
+  padding-top: 5vw;
+}
+
+section .hero {
+  height: fit-content;
+  width: 100%;
+  padding-left: 27%;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 7.3vw;
+  text-transform: uppercase;
+  font-family: "plain";
+  line-height: 1;
+  font-weight: 500;
+  position: relative;
+}
+
+.hero-first-h1::before {
+  content: "01";
+  font-family: "silk serif";
+  position: absolute;
+  font-size: 3.2vw;
+  top: 10px;
+  left: -80px;
+}
+
+.hero-hover{
+    display: flex;
+    
+}
+
+.hero-hover h1{
+    /* text-decoration: underline; */
+    border-bottom: 8px solid white;
+}
+
+.web:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    text-decoration: none;
+}
+.graphic:hover{
+    -webkit-text-stroke: 1px white;
+    text-decoration: none;
+    color: transparent;
+}
+
+.hero-hover h1:nth-child(2){
+    text-decoration: none;
+    border-bottom: 0;
+}
+
+
+/* Page 2 */
+.page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  padding-top: 15vh;
+  position: relative;
+}
+
+.video-container{
+    height: 70vh;
+    width: fit-content;
+    margin-left: 30%;
+    position: absolute;
+    right: 0;
+    /* background-image: url("https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg");
+    background-size: 100%; */
+}
+
+.video-container video{
+    height: 100%;
+}
+.video-container img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.video-crsr{
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    background-color: #ffa73c;
+    position: absolute;
+    z-index: 5;
+    top: -12%;
+    right: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-crsr i{
+    font-size: 2.7vw;
+}
+
+.page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+}
