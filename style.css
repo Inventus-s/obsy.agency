@@ -241,7 +241,8 @@ section .hero {
 .page2 {
   height: 100vh;
   width: 100%;
-  background-color: #151515;
+  background-color: transparent;
+  /* background-color: red; */
   padding-top: 15vh;
   position: relative;
 }
@@ -285,10 +286,35 @@ section .hero {
   font-size: 2.7vw;
 }
 
+
+/* page 3 */
 .page3 {
   height: 100vh;
   width: 100%;
   background-color: #151515;
+}
+
+.page3 h1 {
+  font-size: 7.4vw;
+  text-transform: uppercase;
+  font-family: "plain";
+  font-weight: 500;
+  position: relative;
+  margin-left: 28vw;
+}
+
+.page3 h1::before {
+  content: "02";
+  font-family: "silk serif";
+  position: absolute;
+  font-size: 3.2vw;
+  top: 0.8vw;
+  left: -7vw;
+}
+
+.page3 .underline{
+  width: calc(92% - 28vw);
+  margin-left: 28vw;
 }
 
 /* page4 */
