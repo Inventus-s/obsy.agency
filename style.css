@@ -23,6 +23,7 @@ body {
   mix-blend-mode: difference;
   /* scale: 4; */
   background-color: rgb(255, 255, 255);
+  /* display: none; */
 }
 
 .loader {
@@ -215,7 +216,7 @@ section .hero {
 
 .hero-hover h1 {
   /* text-decoration: underline; */
-  border-bottom: 8px solid white;
+  border-bottom: .6vw solid white;
   width: fit-content;
 }
 
@@ -281,8 +282,8 @@ section .hero {
   background-color: #ffa73c;
   position: fixed;
   /* z-index: 5; */
-  /* top: 115vh;
-  right: 15vw; */
+  top: 115vh;
+  right: 15vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -639,7 +640,7 @@ section .hero {
   font-size: 7vw;
   text-transform: uppercase;
   display: inline-block;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
   margin-right: 16px;
   -webkit-text-stroke: 1px white;
   color: transparent;
@@ -675,7 +676,7 @@ section .hero {
   font-size: 7vw;
   text-transform: uppercase;
   display: inline-block;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
   animation-direction: reverse;
   margin-right: 16px;
   -webkit-text-stroke: 1px white;
@@ -690,6 +691,7 @@ footer{
   width: 100%;
   background-color: #151515;
   padding: 5vw 0;
+  margin-top: 10vw;
 }
 
 
