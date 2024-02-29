@@ -140,6 +140,8 @@ function sheryAnimation() {
   Shery.makeMagnet("nav h4");
 }
 
+let flag = 0;
+let videoBtn = document.querySelector('.video-crsr');
 let videoContainer = document.querySelector('.video-container');
 let videoVideo = document.querySelector('.video-container video');
 function page2Animation(){
@@ -147,51 +149,80 @@ function page2Animation(){
     gsap.to('.mousefollower',{
       opacity:0
     });
-  });
-
-  videoContainer.addEventListener('mouseleave',()=>{
-    gsap.to('.mousefollower',{
-      opacity:1
-    })
-  })
-  
-  let flag = 0;
-  let videoBtn = document.querySelector('.video-crsr');
-  videoContainer.addEventListener('click', () => {
+    videoContainer.addEventListener('click', () => {
       if (flag == 0) {
         videoVideo.play();
         videoVideo.style.opacity=1;
-        videoBtn.innerHTML = `<i class="ri-pause-mini-fill"></i>`
+        document.querySelector('.video-crsr').innerHTML = `<i class="ri-pause-fill"></i>`;
         gsap.to('.video-crsr',{
           scale:.5
-        })
+        });
         flag = 1;
       } else{
         videoVideo.pause();
         videoVideo.style.opacity=0;
-        videoBtn.innerHTML = `<i class="ri-play-mini-fill"></i>`
+        document.querySelector('.video-crsr').innerHTML = `<i class="ri-play-fill"></i>`
         gsap.to('.video-crsr',{
           scale:1
         })
         flag = 0;
       }
   })
-
+  });
 
   videoContainer.addEventListener('mousemove',(e)=>{
     // console.log(e);
     gsap.to('.video-crsr',{
-      left:e.x ,
-      y:e.y - 110
+      left:e.x - 70,
+      y:e.y - 170
+    })
+  });
+
+  videoContainer.addEventListener('mouseleave',()=>{
+    gsap.to('.mousefollower',{
+      opacity:1
+    })
+    document.querySelector('.video-adjust').innerHTML = `<div class="video-crsr" style="top:115vh; right: 15vw;">
+                                  <i class="ri-play-fill"></i>
+                                </div>`
+  });
+};
+
+
+function page1(){
+  document.addEventListener('mousemove',(e)=>{
+    console.log(e);
+    gsap.to('.flag',{
+      x:e.clientX - 150
+    })
+  })
+  document.querySelector('.hero-hover .web').addEventListener('mouseenter',()=>{
+    gsap.to('.flag',{
+      opacity:1
+    })
+  })
+  document.querySelector('.hero-hover .graphic').addEventListener('mouseenter',()=>{
+    gsap.to('.flag',{
+      opacity:1
+    })
+  })
+  document.querySelector('.hero-hover .web').addEventListener('mouseleave',()=>{
+    gsap.to('.flag',{
+      opacity:0
+    })
+  })
+  document.querySelector('.hero-hover .graphic').addEventListener('mouseleave',()=>{
+    gsap.to('.flag',{
+      opacity:0
     })
   })
 }
 
-
 locomotiveAnimation();
 sheryAnimation();
+loader();
+page1();
 page2Animation();
-// loader();
 
 
 

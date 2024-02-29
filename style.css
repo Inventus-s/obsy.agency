@@ -14,7 +14,7 @@ body {
 body {
   background-color: black;
   color: white;
-  /* cursor: none; */
+  cursor: none;
 }
 
 .mousefollower{
@@ -216,6 +216,7 @@ section .hero {
 .hero-hover h1 {
   /* text-decoration: underline; */
   border-bottom: 8px solid white;
+  width: fit-content;
 }
 
 .web:hover {
@@ -233,6 +234,17 @@ section .hero {
   text-decoration: none;
   border-bottom: 0;
 }
+
+.flag{
+  height: 32vw;
+  position: absolute;
+  top: 6vw;
+  left: 0;
+  /* transform: translate(-50%,-50%); */
+  opacity: 0;
+  z-index: -2;
+}
+
 
 /* Page 2 */
 .page2 {
@@ -269,8 +281,8 @@ section .hero {
   background-color: #ffa73c;
   position: fixed;
   /* z-index: 5; */
-  top: 115vh;
-  right: 15vw;
+  /* top: 115vh;
+  right: 15vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -687,12 +699,31 @@ footer{
   margin-left: 28%;
 }
 
-.footer-content > h1{
+.footer-head{
+  height: 7vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.5vw;
+}
+.footer-head>svg{
+  width: 6vw;
+  transition: all ease 3s;
+}
+
+.footer-head > h1{
   font-size: 7vw;
   text-transform: uppercase;
   font-family: 'plain';
   font-weight: 500;
   position: relative;
+  /* transition: all ease 3s; */
+}
+
+.footer-h1:hover{
+  font-family: 'silk serif';
+  -webkit-text-stroke: 1px white;
+  color: transparent;
 }
 
 .footer-h1::before {
@@ -703,6 +734,9 @@ footer{
   top: 0.8vw;
   left: -7vw;
 }
+
+
+
 
 .footer-flex{
   width: 82%;
